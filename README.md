@@ -31,6 +31,27 @@ function stop () {
   clearInterval(interval)
 }
 ```
+#### 后面加数字太容易被禁言了，那就加随机字母吧
+```
+const area = document.getElementsByClassName('cs-textarea')[0]
+const btn = document.getElementsByClassName('b-btn')[0]
+
+const danmu = '哈哈哈哈，主播好搞笑'
+let interval
+function start () {
+  interval = setInterval(function () {
+	let ranNum = Math.ceil(Math.random() * 25);
+    area.value = danmu + String.fromCharCode(65+ranNum)
+    if (btn.innerHTML === '发送') {
+      btn.click()
+    }
+  }, 1000)
+}
+
+function stop () {
+  clearInterval(interval)
+}
+```
 
 ## 熊猫TV代码
 ```
