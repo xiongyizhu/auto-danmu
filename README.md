@@ -1,11 +1,13 @@
-# anto-danmu
+# auto-danmu
 超级简单的自动发弹幕脚本
 
+![图片](https://github.com/xiongyizhu/auto-danmu/blob/master/image/danmu.gif)
 
-## 使用方法
+## 使用说明
 - 打开直播页面按F12
-- 将下方的代码复制粘贴进去**按回车**
-- 输入start()开始自动发弹幕
+- 将下方的代码复制粘贴到控制台**按回车**
+- 输入start()**按回车**开始自动发弹幕
+- 输入stop()**按回车**停止自动发弹幕
 
 ## 斗鱼TV代码
 ```
@@ -30,4 +32,77 @@ function stop () {
 }
 ```
 
+## 熊猫TV代码
+```
+const area = document.getElementsByClassName('room-chat-texta')[0]
+const btn = document.getElementsByClassName('room-chat-send ')[0]
 
+const danmu = '哈哈哈哈，主播好搞笑'
+let i = 0
+let interval
+function start () {
+  interval = setInterval(function () {
+    area.value = danmu + i
+    if (btn.innerHTML === '发送') {
+      btn.click()
+      i++
+    }
+  }, 1000)
+}
+
+function stop () {
+  clearInterval(interval)
+}
+```
+
+## 虎牙TV代码
+```
+const area = document.getElementById('pub_msg_input')
+const btn = document.getElementById('msg_send_bt')
+
+const danmu = '哈哈哈哈，主播好搞笑'
+let i = 0
+let interval
+function start () {
+  interval = setInterval(function () {
+    area.value = danmu + i
+    let time=document.getElementsByClassName("msg_send_time")
+    if (time[0]==undefined || time[0].innerHTML==0) {
+      btn.setAttribute("class", "btn-sendMsg hiido_stat enable"); 
+      btn.click()
+      i++
+    }
+  }, 1000)
+}
+
+function stop () {
+  clearInterval(interval)
+}
+```
+
+## 全名TV代码
+```
+const area = document.getElementsByClassName('room_w-sender_textarea')[0]
+const btn = document.getElementsByClassName('room_w-sender_submit-btn')[0]
+
+const danmu = '哈哈哈哈，主播好搞笑'
+let i = 0
+let interval
+function start () {
+  interval = setInterval(function () {
+    area.value = danmu + i
+    if (btn.innerHTML === '发送') {
+      btn.click()
+      i++
+    }
+  }, 1000)
+}
+
+function stop () {
+  clearInterval(interval)
+}
+```
+
+###### 时效性：可能过一段时间直播平台就河蟹了
+
+###### 免责申明：使用该代码造成任何违法行为均由使用者自行承担
