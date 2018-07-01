@@ -10,7 +10,7 @@
 - 输入stop()**按回车**停止自动发弹幕
 
 ## 大家一起玩
-- [加入群交流](//shang.qq.com/wpa/qunwpa?idkey=3b661ba3ec59d5483603b2fe108d6f5e42606bc8e8a4f7ca0f40c82a6cfb6273)，一起进入同一个直播间同时运行自动弹幕
+- 加入<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=3b661ba3ec59d5483603b2fe108d6f5e42606bc8e8a4f7ca0f40c82a6cfb6273"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="群交流" title="自动弹幕群"></a>，一起进入同一个直播间同时运行自动弹幕
 
 ![图片](https://github.com/xiongyizhu/auto-danmu/blob/master/image/qun.png)
 
