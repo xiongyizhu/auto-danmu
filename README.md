@@ -9,6 +9,11 @@
 - 输入start()**按回车**开始自动发弹幕
 - 输入stop()**按回车**停止自动发弹幕
 
+## 大家一起玩
+- 加入群交流，一起进入同一个直播间同时运行自动弹幕
+
+![图片](https://github.com/xiongyizhu/auto-danmu/blob/master/image/qun.png)
+
 ## 斗鱼TV代码
 ```
 const area = document.getElementsByClassName('cs-textarea')[0]
@@ -101,7 +106,7 @@ function stop () {
 }
 ```
 
-## 全名TV代码
+## 全民TV代码
 ```
 const area = document.getElementsByClassName('room_w-sender_textarea')[0]
 const btn = document.getElementsByClassName('room_w-sender_submit-btn')[0]
