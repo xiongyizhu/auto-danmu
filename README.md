@@ -10,7 +10,8 @@
 - 输入stop()**按回车**停止自动发弹幕
 
 ## 大家一起玩
-- 加入群交流，一起进入同一个直播间同时运行自动弹幕
+- <a target="_blank" href="http//shang.qq.com/wpa/qunwpa?idkey=974f2dee6d684148de65f6bb0b5bbabfdc3eec47ddbc7f971a4b33ef08178c03"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="自动弹幕群" title="自动弹幕群"></a>
+ 一起进入同一个直播间同时运行自动弹幕
 
 ![图片](https://github.com/xiongyizhu/auto-danmu/blob/master/image/qun.png)
 
