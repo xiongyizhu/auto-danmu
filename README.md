@@ -58,6 +58,60 @@ function stop () {
   clearInterval(interval)
 }
 ```
+#### 有人要循环自定义弹幕
+```
+const area = document.getElementsByClassName('cs-textarea')[0]
+const btn = document.getElementsByClassName('b-btn')[0]
+
+const danmuStr =
+`
+听说白雪公主在逃跑
+小红帽在担心大灰狼
+听说疯帽喜欢爱丽丝
+丑小鸭会变成白天鹅
+听说彼得潘总长不大
+杰克他有竖琴和魔法
+听说森林里有糖果屋
+灰姑娘丢了心爱的玻璃鞋
+只有睿智的河水知道
+白雪是因为贪玩跑出了城堡
+小红帽有件抑制自己
+变成狼的大红袍
+总有一条蜿蜒在童话镇里七彩的河
+沾染魔法的乖张气息
+却又在爱里曲折
+川流不息扬起水花
+又卷入一帘时光入水
+让所有很久很久以前
+都走到幸福结局的时刻
+听说睡美人被埋藏
+小人鱼在眺望金殿堂
+听说阿波罗变成金乌
+草原有奔跑的剑齿虎
+`
+let danmus=danmuStr.split('\n')
+danmus.pop()
+danmus.shift()
+let interval
+let index=0;
+function start () {
+	interval = setInterval(function () {
+	if(index===danmus.length){
+		index=0;
+	}
+	area.value =danmus[index]
+    if (btn.innerHTML === '发送') {
+		btn.click()
+		index++
+    }
+  }, 1000)
+}
+start()
+
+function stop () {
+  clearInterval(interval)
+}
+```
 
 ## 熊猫TV代码
 ```
