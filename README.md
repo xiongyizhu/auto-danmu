@@ -17,51 +17,52 @@
 
 ## 斗鱼TV代码
 ```
-const area = document.getElementsByClassName('ChatSend-txt')[0]
-const btn = document.getElementsByClassName('ChatSend-button ')[0]
+const area = document.getElementsByClassName('cs-textarea')[0]
+const btn = document.getElementsByClassName('b-btn')[0]
 
 const danmu = '哈哈哈哈，主播好搞笑'
 let i = 0
 let interval
-function start () {
+let start = function() {
   interval = setInterval(function () {
     area.value = danmu + i
     if (btn.innerHTML === '发送') {
       btn.click()
       i++
     }
-  }, 1000)
+  }, 2000)//每2秒发一次
 }
+start();
 
-function stop () {
+let stop = function () {
   clearInterval(interval)
 }
 ```
 #### 后面加数字太容易被禁言了，那就加随机字母吧
 ```
-const area = document.getElementsByClassName('ChatSend-txt')[0]
-const btn = document.getElementsByClassName('ChatSend-button ')[0]
+const area = document.getElementsByClassName('cs-textarea')[0]
+const btn = document.getElementsByClassName('b-btn')[0]
 
 const danmu = '哈哈哈哈，主播好搞笑'
 let interval
-function start () {
+let start = function() {
   interval = setInterval(function () {
 	let ranNum = Math.ceil(Math.random() * 25);
     area.value = danmu + String.fromCharCode(65+ranNum)
     if (btn.innerHTML === '发送') {
       btn.click()
     }
-  }, 1000)
+  }, 2000)//每2秒发一次
 }
 
-function stop () {
+let stop = function () {
   clearInterval(interval)
 }
 ```
 #### 有人要循环自定义弹幕
 ```
-const area = document.getElementsByClassName('ChatSend-txt')[0]
-const btn = document.getElementsByClassName('ChatSend-button ')[0]
+const area = document.getElementsByClassName('cs-textarea')[0]
+const btn = document.getElementsByClassName('b-btn')[0]
 
 const danmuStr =
 `
@@ -94,7 +95,7 @@ danmus.pop()
 danmus.shift()
 let interval
 let index=0;
-function start () {
+let start = function() {
 	interval = setInterval(function () {
 	if(index===danmus.length){
 		index=0;
@@ -104,11 +105,11 @@ function start () {
 		btn.click()
 		index++
     }
-  }, 1000)
+  }, 2000)//每2秒发一次
 }
 start()
 
-function stop () {
+let stop = function () {
   clearInterval(interval)
 }
 ```
