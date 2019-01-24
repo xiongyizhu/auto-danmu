@@ -16,6 +16,7 @@
 ![图片](https://github.com/xiongyizhu/auto-danmu/blob/master/image/qun.png)
 
 ## 斗鱼TV代码
+#### 斗鱼TV前端代码有2套，如果当前版本代码失效，请使用[这个版本的代码](https://github.com/xiongyizhu/auto-danmu/blob/9ce1ddb68affbaff6d10d948f418c289cb953ee0/README.md)
 ```
 const area = document.getElementsByClassName('cs-textarea')[0]
 const btn = document.getElementsByClassName('b-btn')[0]
